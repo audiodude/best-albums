@@ -1,0 +1,5 @@
+highlights: pygments
+safe: true
+lsi: false
+exclude: ['Gemfile', 'Gemfile.lock', 'README.md']
+destination: _site

@@ -1,0 +1,32 @@
+.album {
+  margin-bottom: 10px;
+}
+
+.album-small {
+  height: 100px;
+  width: 100px;
+}
+
+.album-large {
+  color: #666;
+  width: 400px;
+}
+
+.album-large .fa-compress {
+  float: right;
+}
+
+.album-artist {
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.album-album {
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  margin: 10px 0;
+}

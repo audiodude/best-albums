@@ -1,7 +1,7 @@
 require 'json'
 
-RE_ARTIST = /^<p><strong>([^<]+)<\/strong><\/p>\n/
-RE_ALBUM = /^<p>(?:<a href="([^"]+)">)?<em>([^<]+)<\/em>(?:<\/a>)?<\/p>\n/
+RE_ARTIST = /\A<p><strong>([^<]+)<\/strong><\/p>\n/
+RE_ALBUM = /\A<p>(?:<em>)?(?:<a href="([^"]+)">)?(?:<em>)?([^<]+)(?:<\/em>)?(?:<\/a>)?(?:<\/em>)?<\/p>\n/
 RE_IFRAME = /(?:\n<p>)?<iframe.*src=".*album\/([^"]+)".*<\/iframe>/
 
 data = nil
@@ -14,8 +14,8 @@ data['posts'].each do |post|
   album = {
     slug: post['slug'],
     timestamp: post['unix-timestamp'],
-    photo_url_400: post['photo-url-400'],
-    photo_url_250: post['photo-url-250'],
+    photo_url_lg: post['photo-url-400'],
+    photo_url_sm: post['photo-url-100'],
   }
   html = post['photo-caption']
   html.match(RE_ARTIST) do |md|
@@ -24,6 +24,7 @@ data['posts'].each do |post|
   end
 
   html.match(RE_ALBUM) do |md|
+    # puts md.captures[1]
     album['link'] = md.captures[0]
     album['album'] = md.captures[1]
     html = html[md.end(0)...html.size]

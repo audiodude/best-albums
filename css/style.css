@@ -66,6 +66,11 @@ body {
   text-decoration: underline;
 }
 
+.spotify {
+  background-color: #7d7e7d;
+  margin-top: 10px;
+}
+
 #collapse-all {
   background-color: transparent;
   box-sizing: border-box;

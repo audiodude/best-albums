@@ -12,6 +12,8 @@
     {{^link}}<p class="album-album">{{album}}</p>{{/link}}
 
     {{{html}}}
+
+    <p class="spotify" data-spotify-id="{{spotify_id}}"></p>
     <i class="fa fa-compress"></i>
   </div>
 </div>

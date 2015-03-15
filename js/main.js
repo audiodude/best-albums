@@ -1,4 +1,21 @@
 var albumTemplate = null;
+var spotifyTemplate = null;
+
+function isEmpty(el){
+  return !$.trim(el.html());
+}
+
+function showSpotifyEmbed(albumEl) {
+  var spotifyEl = albumEl.find('.spotify');
+  if (!isEmpty(spotifyEl)) {
+    // Don't re-embed if there's already one there.
+    return;
+  }
+
+  var spotifyId = spotifyEl.data('spotify-id');
+  var spotifyHTML = Mustache.render(spotifyTemplate, {'spotify_id': spotifyId});
+  spotifyEl.html(spotifyHTML);
+}
 
 function initWithAlbums(data) {
   for(var i=0; i<data.albums.length; i++) {
@@ -13,7 +30,10 @@ function initWithAlbums(data) {
   $('.album-small').click(function() {
     $('#collapse-all').show();
     $(this).hide();
-    $(this).next('.album-large').show();
+    var albumLarge = $(this).next('.album-large')
+    albumLarge.show();
+    showSpotifyEmbed(albumLarge);
+
     $('#albums-cont').masonry();
   });
 
@@ -39,12 +59,19 @@ function initWithAlbums(data) {
 }
 
 $(function() {
+  // Load these serially to avoid a race condition/empty screen.
   $.get('/tmpl/album.mst', function(template) {
     albumTemplate = template;
     Mustache.parse(template);
-    $.ajax('/albums.json', {
-      dataType: 'json',
-      success: initWithAlbums
+
+    $.get('/tmpl/spotify.mst', function(template_1) {
+      spotifyTemplate = template_1;
+      Mustache.parse(template_1);
+
+      $.ajax('/albums.json', {
+        dataType: 'json',
+        success: initWithAlbums
+      });
     });
   });
 })

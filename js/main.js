@@ -42,10 +42,9 @@ $(function() {
   $.get('/tmpl/album.mst', function(template) {
     albumTemplate = template;
     Mustache.parse(template);
-  });
-
-  $.ajax('/albums.json', {
-    dataType: 'json',
-    success: initWithAlbums
+    $.ajax('/albums.json', {
+      dataType: 'json',
+      success: initWithAlbums
+    });
   });
 })

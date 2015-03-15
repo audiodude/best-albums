@@ -24,7 +24,6 @@ data['posts'].each do |post|
   end
 
   html.match(RE_ALBUM) do |md|
-    # puts md.captures[1]
     album['link'] = md.captures[0]
     album['album'] = md.captures[1]
     html = html[md.end(0)...html.size]

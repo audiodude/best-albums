@@ -1,4 +1,22 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: #7d7e7d; /* Old browsers */
+  background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+  height: 100%;
+}
+
 .album {
+  background-color: #ddd;
+  cursor: pointer;
   margin-bottom: 10px;
 }
 
@@ -8,12 +26,18 @@
 }
 
 .album-large {
+  border-style: border-box;
   color: #666;
+  padding: 15px;
+  position: relative;
   width: 400px;
 }
 
 .album-large .fa-compress {
-  float: right;
+  bottom: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 4px;
 }
 
 .album-artist {
@@ -29,4 +53,34 @@
   font-size: 18px;
   font-style: italic;
   margin: 10px 0;
+}
+
+.album-album a,
+.album-album a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.album-album a:hover,
+.album-album a:active {
+  text-decoration: underline;
+}
+
+#collapse-all {
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: default;
+  height: 100px;
+  padding: 8px;
+  text-align: center;
+  width: 100px;
+}
+
+#collapse-all span {
+  background-color: #ddd;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 38px;
+  padding: 0 10px;
+  text-align: center;
 }

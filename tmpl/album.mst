@@ -5,8 +5,12 @@
   <div class="album-large" style="display: none">
     {{#link}}<a href="{{link}}"><img src="{{photo_url_lg}}"></a>{{/link}}
     {{^link}}<img src="{{photo_url_lg}}">{{/link}}
+
     <p class="album-artist">{{artist}}</p>
-    <p class="album-album">{{album}}</p>
+
+    {{#link}}<p class="album-album"><a href="{{link}}">{{album}}</a></p>{{/link}}
+    {{^link}}<p class="album-album">{{album}}</p>{{/link}}
+
     {{{html}}}
     <i class="fa fa-compress"></i>
   </div>

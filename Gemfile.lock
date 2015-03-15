@@ -123,4 +123,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  RedCloth
   github-pages

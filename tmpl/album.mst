@@ -1,10 +1,10 @@
 <div class="album">
   <div class="album-small">
-    <img src="{{photo_url_sm}}">
+    <img class="art-sm" src="{{photo_url_sm}}">
   </div>
   <div class="album-large" style="display: none">
-    {{#link}}<a href="{{link}}"><img src="{{photo_url_lg}}"></a>{{/link}}
-    {{^link}}<img src="{{photo_url_lg}}">{{/link}}
+    {{#link}}<a href="{{link}}"><img class="art-lg" src="{{photo_url_lg}}"></a>{{/link}}
+    {{^link}}<img class="art-lg" src="{{photo_url_lg}}">{{/link}}
 
     <p class="album-artist">{{artist}}</p>
 

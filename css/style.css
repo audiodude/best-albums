@@ -14,15 +14,20 @@ body {
   height: 100%;
 }
 
+em {
+  font-style: italic;
+}
+
 .album {
   background-color: #ddd;
   cursor: pointer;
   margin-bottom: 10px;
 }
 
-.album-small {
-  height: 100px;
-  width: 100px;
+.album-small,
+.art-sm {
+  height: 90px;
+  width: 90px;
 }
 
 .album-large {
@@ -30,6 +35,11 @@ body {
   color: #666;
   padding: 15px;
   position: relative;
+  width: 400px;
+}
+
+.art-lg {
+  height: 400px;
   width: 400px;
 }
 

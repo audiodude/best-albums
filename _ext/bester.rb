@@ -27,6 +27,7 @@ def process_file(path)
   end
 
   album = YAML.load(parts[1])
+  album['slug'] = File.basename(path).split('.')[0]
   album['html'] = RedCloth.new(parts[2]).to_html
   return album
 end

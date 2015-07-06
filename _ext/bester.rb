@@ -39,7 +39,14 @@ if File.directory?(arg_path)
   # Process each file in the top level of the directory. Does not work
   # recursively
 else
-  data['albums'].insert(0, process_file(arg_path))
+  new_album = process_file(arg_path)
+
+  found_album = false
+  data['albums'].each do |album|
+    found_album = album['slug'] == new_album['slug']
+    break if found_album
+  end
+  data['albums'].insert(0, new_album) unless found_album
 end
 
 JSON.dump(data, File.open(ARGV[0], 'w'))

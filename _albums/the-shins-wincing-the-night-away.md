@@ -1,5 +1,5 @@
 ---
-artist: The Shings
+artist: The Shins
 album: Wincing the Night Away
 link: http://www.amazon.com/gp/product/B000K2VHN2/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B000K2VHN2&linkCode=as2&tag=besalbintheun-20&linkId=QEYPVYZ5ZAIPK7T2
 spotify_id: 7f5IY1tuyC4yEardrzrxwe

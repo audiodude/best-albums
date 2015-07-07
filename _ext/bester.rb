@@ -1,18 +1,36 @@
 require 'json'
+require 'optparse'
 require 'yaml'
 
 require 'redcloth'
 
-if ARGV.size < 2
-  puts 'usage: bester.rb json-file file-or-directory'
-  puts 'The file or directory given as the final argument is processed and'
-  puts 'added to the JSON data. The JSON file is overwritten as a result'
+options = {}
+opt_parser = OptionParser.new do |opts|
+  opts.banner = "Usage: bester.rb [options] file-or-directory"
+
+  opts.on('-f', '--force',
+          'Force the update of an existing item in the data. If not set, ' +
+          'existing items (with the same slug) will be skipped') do |force|
+    options[:force] = true
+  end
+
+  opts.on('-d', '--data PATH',
+          'Read and output to PATH, which will be overwritten. If not ' +
+          'specified, this defaults to stdout and empty input data') do |path|
+    options[:out_path] = path
+  end
+end
+opt_parser.parse!(ARGV)
+if ARGV.size == 0
+  puts opt_parser.help
   exit 1
 end
 
-data = nil
-File.open(ARGV[0]) do |data_file|
-  data = JSON.load(data_file)
+data = {'albums' => []}
+if options[:out_path]
+  File.open(options[:out_path]) do |data_file|
+    data = JSON.load(data_file)
+  end
 end
 
 def process_file(path)
@@ -33,7 +51,7 @@ def process_file(path)
   return album
 end
 
-arg_path = ARGV[1]
+arg_path = ARGV[0]
 if File.directory?(arg_path)
   # TODO:
   # Process each file in the top level of the directory. Does not work
@@ -41,13 +59,24 @@ if File.directory?(arg_path)
 else
   new_album = process_file(arg_path)
 
-  found_album = false
-  data['albums'].each do |album|
-    found_album = album['slug'] == new_album['slug']
-    break if found_album
+  found_idx = -1
+  data['albums'].each_with_index do |album, i|
+    found_idx = i if album['slug'] == new_album['slug']
+    break if found_idx != -1
   end
-  data['albums'].insert(0, new_album) unless found_album
+
+  if found_idx != -1
+    if options[:force]
+      data['albums'][found_idx] = new_album
+    end
+  else
+    data['albums'].insert(0, new_album)
+  end
 end
 
-JSON.dump(data, File.open(ARGV[0], 'w'))
+if options[:out_path]
+  JSON.dump(data, File.open(options[:out_path], 'w'))
+else
+  puts JSON.dumps(data)
+end
 

@@ -47,6 +47,7 @@ def process_file(path)
   album = YAML.load(parts[1])
   album['timestamp'] = File.new(path).mtime.to_i
   album['slug'] = File.basename(path).split('.')[0]
+  album['mini-slug'] = album['slug'].split('-')[0..3].join('-')
   album['html'] = RedCloth.new(parts[2]).to_html
   return album
 end

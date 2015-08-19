@@ -1,5 +1,5 @@
 <div class="album">
-  <div class="album-small">
+  <div class="album-small" data-mini-slug="{{mini-slug}}">
     <img class="art-sm" src="{{photo_url_sm}}">
   </div>
   <div class="album-large" style="display: none">

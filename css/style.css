@@ -31,16 +31,16 @@ em {
 }
 
 .album-large {
-  border-style: border-box;
+  box-sizing: border-box;
   color: #666;
   padding: 15px;
   position: relative;
-  width: 400px;
+  width: 390px;
 }
 
 .art-lg {
-  height: 400px;
-  width: 400px;
+  height: 360px;
+  width: 360px;
 }
 
 .album-large .fa-compress {

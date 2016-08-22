@@ -34,6 +34,6 @@ Synopsis goes here and [uses Markdown](http://daringfireball.net/projects/markdo
 
 Finally, run the "bester" script:
 
-`$ ruby _ext/bester.rb albums.json _albums/rancid-and-out-come-the-wolves.md`
+`$ ruby _ext/bester.rb -d albums.json _albums/rancid-and-out-come-the-wolves.md`
 
 Warning, this will overwrite your current albums.json file. Additionally, if you run the script multiple times it will currently add duplicate entries.

@@ -1,7 +1,7 @@
 ---
 artist: Neutral Milk Hotel
 album: In the Aeroplane Over the Sea
-link: http://amzn.to/2bC1r6q
+link: https://amzn.to/2bC1r6q
 spotify_id: 5COXoP5kj2DWfCDg0vxi4F
 photo_url_sm: https://i.imgur.com/5Lq6x5Zs.jpg
 photo_url_lg: https://i.imgur.com/5Lq6x5Zl.jpg

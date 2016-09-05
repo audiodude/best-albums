@@ -6,6 +6,16 @@ function isEmpty(el){
   return !$.trim(el.html());
 }
 
+function setOpenSlugs() {
+  parts = window.location.hash.substr(1).split('+');
+  open_slugs = [];
+  for (var i=0; i<parts.length; i++) {
+    if (parts[i]) {
+      open_slugs.push(parts[i]);
+    }
+  }
+};
+
 function showSpotifyEmbed(albumEl) {
   var spotifyEl = albumEl.find('.spotify');
   if (!isEmpty(spotifyEl)) {
@@ -92,7 +102,7 @@ function setState() {
 window.addEventListener('popstate', function(event) {
   collapseAll(null, true);
   if (!event.state) {
-    open_slugs = window.location.hash.substr(1).split('+');
+    setOpenSlugs();
     setState();
     return;
   }
@@ -114,7 +124,7 @@ function initWithAlbums(data) {
   $('.album-large .fa-times').click(collapseThisAlbum);
   $('#collapse-all span').click(collapseAll);
 
-  open_slugs = window.location.hash.substr(1).split('+');
+  setOpenSlugs();
   setState();
 }
 

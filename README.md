@@ -36,4 +36,22 @@ Finally, run the "bester" script:
 
 `$ ruby _ext/bester.rb -d albums.json _albums/rancid-and-out-come-the-wolves.md`
 
-Warning, this will overwrite your current albums.json file. Additionally, if you run the script multiple times it will currently add duplicate entries.
+*Warning:* This will overwrite your current albums.json file. If, after updating the albums.json file you'd like to update it again from the same Markdown file (presumably with new contents), you will need to pass the -f (force) flag to the bester script:
+
+`$ ruby _ext/bester.rb -fd albums.json _albums/rancid-and-out-come-the-wolves.md`
+
+## Publishing the site
+
+The site used to be hosted on a gh-pages branch (see [Github Pages](https://pages.github.com/)), but it was switched to [Pubstorm](http://www.pubstorm.com/) because of the superior support for SSL. To publish the site, you must first install [Jekyll](https://jekyllrb.com/) and its dependencies from the included Gemfile:
+
+`$ bundle install`
+
+Then run the command to generate a static version of the site in the _site directory:
+
+`$ bundle exec jekyll build`
+
+Next, once you [have the Pubstorm CLI installed](https://help.pubstorm.com/getting-started/getting-started/) you can simply:
+
+`$ storm publish`
+
+This of course assumes you are logged in with an account that has authority to publish to the main site URL as defined in the `pubstorm.json` file.

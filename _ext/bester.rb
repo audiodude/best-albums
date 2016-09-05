@@ -78,6 +78,6 @@ end
 if options[:out_path]
   JSON.dump(data, File.open(options[:out_path], 'w'))
 else
-  puts JSON.dumps(data)
+  puts JSON.generate(data)
 end
 

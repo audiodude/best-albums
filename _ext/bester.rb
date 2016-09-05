@@ -40,7 +40,7 @@ def process_file(path)
     album_data = album_file.read
     parts = album_data.split("---\n")
     if parts.size != 3
-      raise "No front matter detected in markdown file. This is required"
+      raise "No front matter detected in #{path}. This is required"
     end
   end
 

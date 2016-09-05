@@ -33,18 +33,18 @@ em {
 .album-large {
   box-sizing: border-box;
   color: #666;
-  padding: 15px;
+  padding: 20px;
   position: relative;
   width: 390px;
 }
 
 .art-lg {
-  height: 360px;
-  width: 360px;
+  height: 350px;
+  width: 350px;
 }
 
-.album-large .fa-compress {
-  bottom: 4px;
+.album-large .fa-times {
+  top: 4px;
   cursor: pointer;
   position: absolute;
   right: 4px;

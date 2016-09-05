@@ -3,6 +3,7 @@
     <img class="art-sm" src="{{photo_url_sm}}">
   </div>
   <div class="album-large" style="display: none">
+    <i class="fa fa-times"></i>
     {{#link}}<a href="{{link}}"><img class="art-lg" src="{{photo_url_lg}}"></a>{{/link}}
     {{^link}}<img class="art-lg" src="{{photo_url_lg}}">{{/link}}
 
@@ -14,6 +15,5 @@
     {{{html}}}
 
     <p class="spotify" data-spotify-id="{{spotify_id}}"></p>
-    <i class="fa fa-compress"></i>
   </div>
 </div>

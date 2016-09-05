@@ -111,7 +111,7 @@ function initWithAlbums(data) {
   });
 
   $('.album-small').click(expandThisAlbum);
-  $('.album-large .fa-compress').click(collapseThisAlbum);
+  $('.album-large .fa-times').click(collapseThisAlbum);
   $('#collapse-all span').click(collapseAll);
 
   open_slugs = window.location.hash.substr(1).split('+');

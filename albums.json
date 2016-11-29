@@ -12,7 +12,10 @@
   "timestamp": {{album.path | mtime}},
   "slug": "{{album.path | slug}}",
   "mini-slug": "{{album.path | slug | mini_slug}}",
-  "html": "{{album.content}}"
+  "html": "{{album.content | strip}}"
+
+
+
 }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]}

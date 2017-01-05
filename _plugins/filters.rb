@@ -11,6 +11,10 @@ module Jekyll
     def mini_slug(input)
       input.split('-')[0..3].join('-')
     end
+
+    def xstrip(input)
+      input.strip
+    end
   end
 end
 

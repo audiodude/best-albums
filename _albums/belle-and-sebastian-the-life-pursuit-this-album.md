@@ -5,4 +5,4 @@ spotify_id: 1hS6jLMAAtF4UDOucCewKR
 photo_url_sm: http://41.media.tumblr.com/tumblr_m1axj5Fjul1rsqbe7o1_100.jpg
 photo_url_lg: http://40.media.tumblr.com/tumblr_m1axj5Fjul1rsqbe7o1_400.jpg
 ---
-This album just makes me feel good. It has several numbers, such as*The Blues Are Still Blue*and*White Collar Boy*which are fairly danceable, and several songs have parts that make me want to drop everything and sing along. Also, I have a soft spot for albums that reprise songs. 
+This album just makes me feel good. It has several numbers, such as*The Blues Are Still Blue*and*White Collar Boy*which are fairly danceable, and several songs have parts that make me want to drop everything and sing along. Also, I have a soft spot for albums that reprise songs.

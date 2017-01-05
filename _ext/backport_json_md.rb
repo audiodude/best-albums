@@ -17,6 +17,6 @@ data['albums'].each do |album|
       outfile.write("#{key}: #{album[key]}\n")
     }
     outfile.write("---\n")
-    outfile.write(album['markdown'].gsub("\n", " "))
+    outfile.write(album['markdown'].strip.gsub("\n", " "))
   end
 end

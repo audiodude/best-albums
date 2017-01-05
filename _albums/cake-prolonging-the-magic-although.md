@@ -5,10 +5,4 @@ spotify_id: 1vbpW28Od2ATmVyAZ0QZ3j
 photo_url_sm: http://40.media.tumblr.com/5fbb1736084c081512203fc2da58a698/tumblr_mimz23g1GO1rsqbe7o1_100.jpg
 photo_url_lg: http://40.media.tumblr.com/5fbb1736084c081512203fc2da58a698/tumblr_mimz23g1GO1rsqbe7o1_400.jpg
 ---
-Although 1996’s*Fashion Nugget* contained their smash hit “The
-Distance”, Cake’s third album*Prolonging the Magic*stands out as one of
-the best albums in the universe. This is alternative rock at is best as
-the band crafts songs that are catchy and funky, all while having a
-distinct and unique sound. Don’t miss the bold use of almost the exact
-same rhythm between “Hem of Your Garment” and “Let Me Go”. And of course
-there are the hits “Sheep Go To Heaven” and “Never There”.
+Although 1996’s*Fashion Nugget* contained their smash hit “The Distance”, Cake’s third album*Prolonging the Magic*stands out as one of the best albums in the universe. This is alternative rock at is best as the band crafts songs that are catchy and funky, all while having a distinct and unique sound. Don’t miss the bold use of almost the exact same rhythm between “Hem of Your Garment” and “Let Me Go”. And of course there are the hits “Sheep Go To Heaven” and “Never There”. 

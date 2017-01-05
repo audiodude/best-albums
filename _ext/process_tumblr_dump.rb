@@ -13,6 +13,7 @@ albums = []
 data['posts'].each do |post|
   album = {
     slug: post['slug'],
+    'mini-slug': post['slug'].split('-')[0..3].join('-'),
     timestamp: post['unix-timestamp'],
     photo_url_lg: post['photo-url-400'],
     photo_url_sm: post['photo-url-100'],

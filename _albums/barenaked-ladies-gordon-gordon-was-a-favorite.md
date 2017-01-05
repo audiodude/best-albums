@@ -5,9 +5,4 @@ spotify_id: 42U1vGhrWUN6TeM5mwN691
 photo_url_sm: http://40.media.tumblr.com/9cd952c66194162203a962093be3e088/tumblr_mv8ycnPxCT1rsqbe7o1_100.jpg
 photo_url_lg: http://40.media.tumblr.com/9cd952c66194162203a962093be3e088/tumblr_mv8ycnPxCT1rsqbe7o1_400.jpg
 ---
-*Gordon*was a favorite record of my youth, and it really is easy to see
-why. The songs are lighthearted, peppy and sometimes outright comical in
-the case of “If I Had \$1000000”. Though this clearly isn’t serious or
-pretentious fare, there is a definite love of melody shown by these
-Canadian pop rockers. This is an album that you can sing along with
-front to back.
+*Gordon*was a favorite record of my youth, and it really is easy to see why. The songs are lighthearted, peppy and sometimes outright comical in the case of “If I Had \$1000000”. Though this clearly isn’t serious or pretentious fare, there is a definite love of melody shown by these Canadian pop rockers. This is an album that you can sing along with front to back. 

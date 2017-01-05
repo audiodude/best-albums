@@ -5,8 +5,4 @@ spotify_id: 6I4bM7J2ID9KN5x1bmiJgW
 photo_url_sm: http://41.media.tumblr.com/tumblr_m4yf5meB821rsqbe7o1_100.jpg
 photo_url_lg: http://41.media.tumblr.com/tumblr_m4yf5meB821rsqbe7o1_400.jpg
 ---
-This is the first album that we’re posting that doesn’t have broad
-popular appeal. In fact, if you aren’t a fan of punk music you might
-overlook this amazing album. Even if you only have a passing interest in
-punk, this is the genre at its distilled finest and is definitely worth
-checking out.
+This is the first album that we’re posting that doesn’t have broad popular appeal. In fact, if you aren’t a fan of punk music you might overlook this amazing album. Even if you only have a passing interest in punk, this is the genre at its distilled finest and is definitely worth checking out. 

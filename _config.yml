@@ -1,5 +1,7 @@
 highlights: pygments
-safe: true
 lsi: false
-exclude: ['Gemfile', 'Gemfile.lock', 'README.md', 'CNAME']
+exclude: ['Gemfile', 'Gemfile.lock', 'README.md']
 destination: _site
+
+collections:
+  albums:

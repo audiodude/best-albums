@@ -111,6 +111,10 @@ window.addEventListener('popstate', function(event) {
 });
 
 function initWithAlbums(data) {
+  data.albums.sort(function(a, b) {
+    return b.timestamp - a.timestamp;
+  });
+
   for(var i=0; i<data.albums.length; i++) {
     $('#albums-cont').prepend(Mustache.render(albumTemplate, data.albums[i]))
   }

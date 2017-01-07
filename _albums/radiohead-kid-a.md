@@ -5,5 +5,6 @@ link: https://www.amazon.com/gp/product/B0019R7XXU/ref=as_li_tl?ie=UTF8&camp=178
 spotify_id: 6J6nlVu4JMveJz0YM9zDgL
 photo_url_sm: https://i.imgur.com/r4bU0ZNs.jpg
 photo_url_lg: https://i.imgur.com/r4bU0ZNl.jpg
+timestamp: 1428785957
 ---
 This is the perfect soundtrack to our post-apocalyptic present. I feel like from the opening notes to the closing soundscapes, this album captures the alienation and desperation of modern day life. It is brilliant and haunting, yet still manages to rock quite a bit in parts. _Kid A_ is simply a masterpiece.

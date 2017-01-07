@@ -9,7 +9,11 @@
   "spotify_id": "{{album.spotify_id}}",
   "photo_url_sm": "{{album.photo_url_sm}}",
   "photo_url_lg": "{{album.photo_url_lg}}",
+  {% if album.timestamp %}
+  "timestamp": {{album.timestamp}},
+  {% else %}
   "timestamp": {{album.path | mtime}},
+  {% endif %}
   "slug": "{{album.path | slug}}",
   "mini-slug": "{{album.path | slug | mini_slug}}",
   "html": {{album.content | xstrip | jsonify}}

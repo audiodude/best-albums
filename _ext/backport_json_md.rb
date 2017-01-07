@@ -13,9 +13,10 @@ data['albums'].each do |album|
 
   File.open("_albums/#{album['slug']}.md", 'w') do |outfile|
     outfile.write("---\n")
-    ['album', 'link', 'spotify_id', 'photo_url_sm', 'photo_url_lg'].each { |key|
-      outfile.write("#{key}: #{album[key]}\n")
+    ['artist', 'album', 'link', 'spotify_id', 'photo_url_sm', 'photo_url_lg'].each { |key|
+      outfile.write("#{key}: '#{album[key]}'\n")
     }
+    outfile.write("timestamp: #{album['timestamp']}\n")
     outfile.write("---\n")
     outfile.write(album['markdown'].strip.gsub("\n", " "))
   end

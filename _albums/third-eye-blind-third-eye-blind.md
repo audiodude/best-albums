@@ -1,7 +1,7 @@
 ---
 artist: Third Eye Blind
 album: Third Eye Blind (eponymous)
-link: http://amzn.to/2c2sq7e
+link: https://amzn.to/2c2sq7e
 spotify_id: 2gToC0XAblE9h3UZD6aAaQ
 photo_url_sm: https://i.imgur.com/6KHk44ts.jpg
 photo_url_lg: https://i.imgur.com/6KHk44tl.jpg

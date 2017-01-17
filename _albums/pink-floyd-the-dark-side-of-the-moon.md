@@ -1,7 +1,7 @@
 ---
 artist: Pink Floyd
 album: The Dark Side of the Moon
-link: http://amzn.to/2bc33ir
+link: https://amzn.to/2bc33ir
 spotify_id: 4LH4d3cOWNNsVw41Gqt2kv
 photo_url_sm: https://i.imgur.com/ouNTfoFs.jpg
 photo_url_lg: https://i.imgur.com/ouNTfoFl.jpg

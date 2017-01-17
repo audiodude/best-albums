@@ -1,7 +1,7 @@
 ---
 artist: Dave Matthews Band
 album: Under The Table And Dreaming
-link: http://amzn.to/2ctdGj5
+link: https://amzn.to/2ctdGj5
 spotify_id: 0SeRWS3scHWplJhMppd6rJ
 photo_url_sm: https://i.imgur.com/KQpu5kVs.jpg
 photo_url_lg: https://i.imgur.com/KQpu5kVl.jpg

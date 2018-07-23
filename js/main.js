@@ -24,7 +24,12 @@ function showSpotifyEmbed(albumEl) {
   }
 
   var spotifyId = spotifyEl.data('spotify-id');
-  var spotifyHTML = Mustache.render(spotifyTemplate, {'spotify_id': spotifyId});
+  var spotifyHTML;
+  if (spotifyId) {
+    spotifyHTML = Mustache.render(spotifyTemplate, {'spotify_id': spotifyId});
+  } else {
+    spotifyHTML = '';
+  }
   spotifyEl.html(spotifyHTML);
 }
 

@@ -13,7 +13,8 @@ clean:
 	$(info deleting output tarball)
 	@rm best-albums.tgz
 
-gemini/index.gmi: write_gemini_index.rb
+gemini/index.gmi: write_gemini_index.rb tmpl/index.gmi.erb
+	$(info writing index)
 	@$(RUBY) write_gemini_index.rb > gemini/index.gmi
 
 gemini/%/index.gmi: _albums/%.md
@@ -23,7 +24,7 @@ gemini/%/index.gmi: _albums/%.md
 		--to plain \
 		--lua-filter best-albums.lua \
 		--template text-gemini.tmpl \
-		--columns 70 \
+		--columns 100000 \
 		--output $@ \
 		$<
 

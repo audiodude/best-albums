@@ -3,3 +3,4 @@ _site
 gemini
 best-albums.tgz
 .bundle
+.jekyll-cache

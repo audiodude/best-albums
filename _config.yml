@@ -1,6 +1,15 @@
 highlights: pygments
 lsi: false
-exclude: ['Gemfile', 'Gemfile.lock', 'README.md']
+exclude:
+  [
+    "Gemfile",
+    "Gemfile.lock",
+    "README.md",
+    "best-albums.lua",
+    "best-albums.tgz",
+    "write_gemini_index.rb",
+    "text-gemini.tmpl",
+  ]
 destination: _site
 
 collections:

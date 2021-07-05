@@ -57,3 +57,7 @@ Next, once you [have the Netlify CLI installed](https://www.netlify.com/docs/) y
 `$ netlify deploy`
 
 This of course assumes you are logged in with an account that has authority to publish to the main site URL as defined in the .netlify file.
+
+# License
+
+MIT License, see LICENSE file.

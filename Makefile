@@ -11,13 +11,13 @@ clean:
 	$(info deleting gemini directory)
 	@rm -rf gemini
 	$(info deleting output tarball)
-	@rm best-albums.tgz
+	@rm -f best-albums.tgz
 
 gemini/index.gmi: write_gemini_index.rb tmpl/index.gmi.erb
 	$(info writing index)
 	@$(RUBY) write_gemini_index.rb > gemini/index.gmi
 
-gemini/%/index.gmi: _albums/%.md
+gemini/%/index.gmi: _albums/%.md best-albums.lua text-gemini.tmpl
 	$(info building $@)
 	@mkdir -p $(dir $@)
 	@$(PANDOC) \
@@ -28,4 +28,10 @@ gemini/%/index.gmi: _albums/%.md
 		--output $@ \
 		$<
 
-.PHONY: clean all
+upload: best-albums.tgz
+	# Configure .ssh/config with username and IdentityFile before running this.
+	$(info uploading to gem.bestalbumsintheuniverse.com)
+	@scp best-albums.tgz tmoney@gem.bestalbumsintheuniverse.com:
+	@ssh tmoney@gem.bestalbumsintheuniverse.com 'tar -xzf best-albums.tgz'
+
+.PHONY: clean all upload

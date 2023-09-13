@@ -9,6 +9,7 @@ exclude:
     "best-albums.tgz",
     "write_gemini_index.rb",
     "text-gemini.tmpl",
+    "vendor",
   ]
 destination: _site
 
